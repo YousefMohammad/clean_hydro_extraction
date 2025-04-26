@@ -1,0 +1,205 @@
+
+/* General Page Container with Background */
+
+.container {
+    display: flex;
+    height: 100vh;
+    background: url('../assets/image.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    justify-content: space-between;
+    padding: 0 5vw;
+    align-items: center;
+  }
+  
+  /* Optional overlay for better readability */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right,var(--color),transparent);
+    z-index: 0;
+  }
+  
+  /* Left Section */
+  .left-side {
+    flex: 1;
+    z-index: 1;
+  }
+  
+  .welcome-title {
+    color: white;
+    font-size: 3.6rem;
+    margin: 15%;
+    line-height: 1.2;
+  }
+  
+  .brand-name {
+    font-weight: bold;
+    color: var(--color);
+  }
+  
+  /* Form Container */
+  .form-container {
+    max-width: 400px;
+    background: rgba(255, 255, 255);
+    width: 100%; 
+    max-height: 85vh;
+    z-index: 1;
+    margin-right: auto;
+    margin-left: auto; 
+    padding: 1rem 2rem;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Title of the Form */
+  .title {
+    color: var(--color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+  }
+  
+  .title::before,
+  .title::after {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 2px;
+    background: var(--color);
+    border-radius: 5px;
+    top: 50%;
+  }
+  
+  .title::before {
+    left: 10%;
+    /* border-top: 2px dashed var(--color); */
+  }
+  
+  .title::after {
+    right: 10%;
+    /* border-top: 2px dashed var(--color); */
+  }
+
+  .desc {
+    font-size: 0.9rem;
+    font-weight: bolder;
+    color: var(--color);
+    opacity: .7;
+    text-align: center;
+  }
+  
+  /* Inputs & Buttons */
+  input {
+    width: 100%;
+    display: flex;
+    padding: 13px 4px;
+    margin: 20px 0;
+    border: none;
+    border-bottom: 2px solid var(--color);
+    font-size: 12px;
+    transition: 0.3s ease;
+    color: var(--color)
+
+  }
+  input::placeholder{
+    color: var(--color);
+    font-weight: bold;
+  }
+  
+  input:focus {
+    padding: 15px 4px;
+  }
+  
+  /* Button */
+  .button {
+    background-color: #076266;  
+    padding: 10px 20px;
+    border-radius: 35px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+    margin: 0% 25% 5% 25%;
+  }
+  
+  .button:hover {
+    background-color: #097f84;
+  }
+  
+  /* Policy Checkbox */
+  .policy {
+    text-align: center;
+    /* margin-top: 15px; */
+    font-size: 14px;
+  }
+  
+  /* Checkbox Container */
+/* Checkbox Container */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  /* margin-top: 10px; */
+  font-size: 14px;
+  justify-content: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox-icon {
+  font-size: 18px;
+  margin-right: 5px;
+  color: #007bff;
+}
+
+.checkbox-container span {
+  color: #000;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkbox-icon {
+  color: #28a745;
+}
+  .names{
+    display: flex;
+    width: 100%;
+  }
+
+  .names input{
+    width: 45%;
+  }
+  .names input:last-child{
+    margin-left:5%;
+  }
+  .passwords{
+    display: flex;
+    width: 100%;
+  }
+
+  .passwords input{
+    width: 45%;
+  }
+  .passwords input:last-child{
+    margin-left:5%;
+  }
+  .input[name="email"]{
+    margin-bottom: 0;
+  }
+  .policy-text {
+    margin-bottom: 4%;
+  }

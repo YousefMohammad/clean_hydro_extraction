@@ -1,0 +1,93 @@
+.portal {
+  display: flex;
+}
+
+.portal-title{
+
+}
+
+.portal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 0;
+    opacity: .2;
+  }
+
+.client {
+  direction: rtl;
+  background-color: hsl(163.5, 94.5%, 14.3%);
+  z-index: 0;
+  position: relative;
+}
+
+.client::before {
+    content: "";
+    background-image: url('/src/assets/client_portal_image.png');
+    background-size: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    opacity: .5;
+    top: 0;
+    left: 0;
+  }
+
+section {
+  padding: 1% 5% 9% 5%;
+  color: #fff;
+  max-height: 100vh;
+}
+section h1 {
+  padding: 0% 1% 2% 2%;
+  font-size: 2rem;
+}
+.company {
+  background-color: hsla(221,85%, 15%);
+  z-index: 0;
+  position: relative;
+}
+.company::before {
+    content: "";
+    background-image: url('/src/assets/company_portal_image.png');
+    background-size: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    opacity: .2;
+    top: 0;
+    left: 0;
+  }
+section p {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+.client p {
+  padding: 0% 1% 1% 20%;
+}
+.company p {
+  padding: 0% 25% 1% 1%;
+}
+.link {
+  text-decoration: none;
+  color: #fff;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 1% 2%;
+  border-radius: 10px;
+}
+.client .link:hover{
+    background-color: #003628;
+    color: hsl(0, 0%, 100%);
+}
+.company .link:hover{
+    background-color: #006289;
+    color: hsl(0, 0%, 100%);
+}
