@@ -1,0 +1,65 @@
+/* components/NavBar.css */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-main);
+    padding: 0 29px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    color: #fff;
+  }
+  
+  .navbar-logo {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 1%;
+    width: 15%;
+    font-family: 'Rounded Ariel', sans-seirf;
+    margin-left: 5%;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 123.6px;
+    color: #fff;
+    text-decoration: none;
+    font-size: .9em;
+  }
+  
+  .navbar-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.5s ease;
+  }
+  
+  .navbar-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 19px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: 2px solid #fff;
+    font-size: .95rem;
+    margin:auto 5%;
+  }
+  
+  .navbar-button:hover {
+    background-color: #205c5a;
+  }
+  
+  .navbar-logo span {
+    margin: 6%;
+  }
+
+  .svg-inline--fa.fa-recycle {
+    font-size: 1.2em;
+    font-weight: bold;
+  }

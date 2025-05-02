@@ -107,7 +107,7 @@
   .desc {
     font-size: 0.9rem;
     font-weight: bolder;
-    color: var(--color);
+    color: var(--color-main);
     opacity: .7;
     text-align: center;
   }
@@ -119,7 +119,7 @@
     padding: 13px 4px;
     margin: 20px 0; 
     border: none;
-    border-bottom: 2px solid var(--color);
+    border-bottom: 2px solid var(--color-main);
     font-size: 12px;
     margin: 30px auto;
     font-weight: 600;
@@ -129,13 +129,13 @@
     background:none;
     margin-top: 5px;
     margin-bottom: 25px;
-    color: var(--color);
+    color: var(--color-main);
     font-weight: 600;
     outline: none;
   }
 
   select option{
-    color: var(--color);
+    color: var(--color-main);
     font-weight: 600;
     background-color: #fff;
     outline: none;
@@ -232,7 +232,7 @@
   }
   
   .brand{
-    color: var(--color);
+    color: var(--color-main);
     font-weight: bolder;
     font-size: 1.2rem;
     margin: 0 7.5%;

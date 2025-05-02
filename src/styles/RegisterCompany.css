@@ -19,7 +19,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(to right,var(--color),transparent);
+    background-image: linear-gradient(to right,var(--color-main),transparent);
     z-index: 0;
   }
   
@@ -38,7 +38,7 @@
   
   .brand-name {
     font-weight: bold;
-    color: var(--color);
+    color: var(--color-main);
   }
   
   /* Form Container */
@@ -65,7 +65,7 @@
   
   /* Title of the Form */
   .title {
-    color: var(--color);
+    color: var(--color-main);
     margin-bottom: 20px;
     text-align: center;
     font-size: 1.5rem;
@@ -78,25 +78,25 @@
     position: absolute;
     width: 25%;
     height: 2px;
-    background: var(--color);
+    background: var(--color-main);
     border-radius: 5px;
     top: 50%;
   }
   
   .title::before {
     left: 10%;
-    /* border-top: 2px dashed var(--color); */
+    /* border-top: 2px dashed var(--color-main); */
   }
   
   .title::after {
     right: 10%;
-    /* border-top: 2px dashed var(--color); */
+    /* border-top: 2px dashed var(--color-main); */
   }
 
   .desc {
     font-size: 0.9rem;
     font-weight: bolder;
-    color: var(--color);
+    color: var(--color-main);
     opacity: .7;
     text-align: center;
   }
@@ -108,14 +108,14 @@
     padding: 13px 4px;
     margin: 20px 0;
     border: none;
-    border-bottom: 2px solid var(--color);
+    border-bottom: 2px solid var(--color-main);
     font-size: 12px;
     transition: 0.3s ease;
-    color: var(--color)
+    color: var(--color-main)
 
   }
   input::placeholder{
-    color: var(--color);
+    color: var(--color-main);
     font-weight: bold;
   }
   

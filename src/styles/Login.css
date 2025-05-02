@@ -1,5 +1,5 @@
 .forgot-password{
     text-align: center;
     text-decoration: underline;
-    color: var(--color);
+    color: var(--color-main);
 }
