@@ -15,8 +15,9 @@ const NavBar = () => {
       <ul className="navbar-links">
         <li><a href="/">Home</a></li>
         <li><a href="/products">Products</a></li>
-        <li><a href="#">Model</a></li>
-        <li><a href="#">Resources</a></li>
+        <li className='model'><a href="/model">Try Our Model</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/countactUs">Contact Us</a></li>
       </ul>
 
       <button className="navbar-button">Get Started</button>

@@ -25,17 +25,42 @@
   .navbar-links {
     list-style: none;
     display: flex;
-    gap: 123.6px;
+    gap: 100px;
     color: #fff;
     text-decoration: none;
     font-size: .9em;
   }
+  .navbar-links li a::after {
+    width: 0%;
+    display: block;
+    position: relative;
+    z-index: 4;
+    content: '';
+    background-color: #fff;
+    height: .22vh;
+    border-radius:20%;
+    top: .5vh;
+  }
   
+  .navbar-links li.model a::after {
+    background-color: #579dff;
+  }
+
+  .navbar-links li a:hover::after {
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+
   .navbar-links li a {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
     transition: all 0.5s ease;
+  }
+
+  .navbar-links li.model a{
+    color: #579dff;
+    filter: brightness(1.3);
   }
   
   .navbar-button {
