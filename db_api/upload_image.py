@@ -8,6 +8,9 @@ router = APIRouter()
 
 @router.post("/")
 async def upload_image(file: UploadFile = File(...)):
+    if not file.content_type.startswith("image/"):
+        return JSONResponse({"error": "Only image files are allowed."}, status_code=400)
+
     service = get_drive_service()
     parent_id = get_or_create_folder(service, "images_data")
     folder_id = get_or_create_folder(service, "images", parent_id)
@@ -23,11 +26,18 @@ async def upload_image(file: UploadFile = File(...)):
     uploaded_file = service.files().create(
         body=file_metadata,
         media_body=media,
-        fields='id, name'
+        fields='id, name, webViewLink'
+    ).execute()
+
+    # Make the file public
+    service.permissions().create(
+        fileId=uploaded_file['id'],
+        body={'type': 'anyone', 'role': 'reader'}
     ).execute()
 
     return JSONResponse({
         "message": "Image uploaded successfully!",
         "file_id": uploaded_file.get("id"),
-        "file_name": uploaded_file.get("name")
+        "file_name": uploaded_file.get("name"),
+        "public_url": uploaded_file.get("webViewLink")
     })

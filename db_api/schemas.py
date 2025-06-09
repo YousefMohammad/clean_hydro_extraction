@@ -9,9 +9,10 @@ class ClientBase(BaseModel):
     lname: str
     phone: str
     email: EmailStr
-    password:str
+    password: str
     address: str
     roles: Dict[Literal["buyer", "seller"], int]  # overlapping roles
+    products: List[str] = []  # <-- Add this line
 
 
 class ClientCreate(ClientBase):
@@ -29,10 +30,11 @@ class CompanyBase(BaseModel):
     name: str
     phone: str
     email: EmailStr
-    password:str
+    password: str
     address: str
     domain: str
     roles: Dict[Literal["buyer", "seller"], int]  # disjoint roles
+    products: List[str] = []  # <-- Add this line
 
 
 class CompanyCreate(CompanyBase):
@@ -56,17 +58,18 @@ class BuyerInfo(BaseModel):
 
 
 class ProductBase(BaseModel):
-    product_id:str
+    product_id: str
     name: str
     state: Literal['available', 'sold out']
     price: float
+    currency: Literal['usd', 'egp']  # <-- Add this line as Literal
     weight: float
+    weight_unit: Literal['kg', 'g'] 
     percentage: float
     percentage_h: float
     description: str
     categories: List[str]
     seller: SellerInfo
-    buyer: BuyerInfo
 
 
 class ProductCreate(ProductBase):
