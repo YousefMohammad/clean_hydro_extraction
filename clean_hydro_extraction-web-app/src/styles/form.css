@@ -1,0 +1,107 @@
+/* General Page Container with Background */ 
+.container {
+    display: flex;
+    height: 100vh;
+    background: url('../assets/image.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    justify-content: space-between;
+    padding: 0 5vw;
+    align-items: center;
+  }
+
+  /* Optional overlay for better readability */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right,#053f41,transparent);
+    z-index: 0;
+  }
+  
+  /* Left Section */
+  .left-side {
+    flex: 1;
+    z-index: 1;
+  }
+  @media screen and (max-width: 768px) {
+    .left-side {
+        display: none;
+    }
+  }
+  
+  .welcome-title {
+    color: white;
+    font-size: 3.6rem;
+    margin: 15%;
+    line-height: 1.2;
+    font-weight: 1000;
+    text-align: left;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    text-shadow: 1px 0 rgb(255, 255, 255), -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+  }
+  
+  .brand-name {
+    font-weight: bold;
+    color: #00d4ff;
+  }
+  /* Form Container */
+  .form-container {
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%; 
+    /* max-height: 85vh; */
+    z-index: 1;
+    margin-right: auto;
+    margin-left: auto; 
+    padding: 1rem 2rem;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Title of the Form */
+  .title {
+    color: #2b888c;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    font-weight: bolder;
+  }
+  
+  .title::before,
+  .title::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: #277a7e;
+    border-radius: 5px;
+    top: 50%;
+  }
+  
+  .title::before {
+    left: -20%;
+    border-top: 2px dashed #277a7e;
+  }
+  
+  .title::after {
+    right: -20%;
+    border-top: 2px dashed #277a7e;
+  }
+
+  input{
+    background: none;
+  }

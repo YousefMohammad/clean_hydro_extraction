@@ -1,0 +1,130 @@
+/* components/WasteProducts.css */
+.products-container {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40vh;
+}
+
+.products-container h1 {
+  margin-bottom: 20px;
+  /*! color: #333; */
+  text-align: center;
+  font-size: 2em;
+  color: var(--color-main);
+  font-weight: 1000;
+  text-shadow: 0.5px 0 var(--color-main), 
+              -0.5px 0 var(--color-main), 
+              0 0.5px var(--color-main), 
+              0 -0.5px var(--color-main), 
+              0.5px 0 var(--color-main), 
+              -0.5px 0 var(--color-main), 
+              0 0.5px var(--color-main), 
+              0 -0.5px var(--color-main);
+  
+}
+
+.category-slider-wrapper {
+  position: relative;
+  display: flex;
+  margin: 2% 13%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap:10px;
+  scrollbar-width: none;
+}
+
+.category-item {
+  flex:0 0 auto;
+  padding:10px 45px;
+  border-radius:10px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space:nowrap;
+  transition:all 0.3s;
+  border:1px solid #000;
+  font-size: 1.1em;
+  background: transparent;
+}
+
+.category-item:hover {
+  color: #fff;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-light);
+}
+
+.category-item.active {
+  color: #fff;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-light);
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  color: var(--color-main);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.left {
+  margin-right: 10px;
+}
+
+.right {
+  margin-left: 10px;
+}
+
+
+.list {
+  display: flex;
+  flex-direction: row;
+  gap:25px;
+  margin:auto 8.5%;  
+  flex-wrap: wrap;
+  padding-left: 5%;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-decoration: none;
+  color: #000;
+  width: 15%;
+  padding:20px;
+  background-color: white;
+  border-radius:10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 20px solid var(--color-main);
+}
+
+.item span{
+  margin: 10px 1px 10px 1px;
+}
+
+.item .image img {
+  width: 75%;
+  object-fit: contain;
+  border-radius:
+15px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.quantity {
+  color: #555;
+}

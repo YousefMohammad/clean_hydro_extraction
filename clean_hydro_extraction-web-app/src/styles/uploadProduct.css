@@ -1,0 +1,36 @@
+/* components/Uploadproduct.css */
+.upload-product-container {
+    padding: 20px;
+    background-color: #fff3e0;
+    border-radius: 10px;
+  }
+  
+  .upload-product-container h2 {
+    margin-bottom: 15px;
+    color: #ef6c00;
+  }
+  
+  .upload-product-container input[type="file"] {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .upload-product-container button {
+    padding: 10px 15px;
+    background-color: #ef6c00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .upload-product-container button:hover {
+    background-color: #d84315;
+  }
+  
+  .upload-product-container p {
+    margin-top: 10px;
+    color: #444;
+  }
+  
